@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login</title>
+        <title> "Login"
+        </title>
         <style>
         body {
             font-family: Arial, Sans-Serif;
@@ -53,13 +54,25 @@
     </head>
     <body>
         <div class="login-container">
+            <h1>LOGIN</h1>
             
-            <form>
-              <input type="text"  placeholder="Masukan Username"  required /> <br />
+            <form id="Login_Hanan_Tzy">
+              <input type="text" id="Username"  placeholder="Masukan Username"  required /> <br />
               <input type= "password" placeholder="Masukkan Password" required />
               <button type="submit" >Login</button><br />
+              <div id="error-massage" class="error" </div>
               <p >Belum punya akun ? <a class="" href="#" >Daftar akun</a></p>
               </form>
         </div>
+        
+        <script>
+            document.getElementByID("Login_Hanan_Tzy").addEventListener('submit',function(event) {
+              event.preventDefault();
+              var username=document.getElementByID('Username').value;
+              var password=document.getElementByID('password').value;
+              var errormessage=document.getElementByID('error-massage');
+                } )
+            
+        </script>
     </body>
 </html>
